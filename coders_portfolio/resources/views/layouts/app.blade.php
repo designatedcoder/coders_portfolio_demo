@@ -18,13 +18,12 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-jet-banner />
-
         <!-- Page Content -->
             {{ $slot }}
 
-        @livewireScripts
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" charset="utf-8"
-        ></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" charset="utf-8"
+            ></script>
+            @yield('extra-js')
+            @livewireScripts
     </body>
 </html>
